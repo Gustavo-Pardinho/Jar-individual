@@ -1,6 +1,8 @@
 package org.example.componentes;
 
 import com.github.britooo.looca.api.core.Looca;
+import com.github.britooo.looca.api.group.janelas.Janela;
+import com.github.britooo.looca.api.group.janelas.JanelaGrupo;
 import com.github.britooo.looca.api.group.memoria.Memoria;
 import com.github.britooo.looca.api.group.processos.Processo;
 import java.nio.file.FileStore;
@@ -8,6 +10,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.Files;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Componentes {
@@ -17,8 +20,8 @@ public class Componentes {
     public static String processador() {
         return looca.getProcessador().toString();
     }
-    public static String janela() {
-        return looca.getGrupoDeJanelas().toString();
+    public static Integer janela() {
+        return looca.getGrupoDeJanelas().getJanelas().size();
     }
     public static Long memoriaTamanhoTotal() {
         return looca.getGrupoDeDiscos().getTamanhoTotal();

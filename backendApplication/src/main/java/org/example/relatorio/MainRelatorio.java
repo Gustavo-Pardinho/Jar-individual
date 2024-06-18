@@ -71,7 +71,7 @@ public class MainRelatorio {
                 System.out.println("Falha ao gerar o relatório.");
             }
         } else if(input == 2) {
-            System.out.println(Componentes.janela());
+            System.out.println("Você tem " + Componentes.janela() + " janelas abertas");
         } else {
             System.out.println("Ok!");
         }
